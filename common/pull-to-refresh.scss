@@ -40,7 +40,7 @@ main {
     transform: translate3d(0, var(--module-n-half), 0);
 
     &:after {
-      background-image: var(--image-loading);
+      background-image: url(var(--image-loading));
     }
   }
 
