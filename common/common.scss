@@ -7,6 +7,8 @@
   --module-n-half: 2.427rem;
   --module-double: 3.236rem;
   --module-double-n-half: 4.045rem;
+
+  --image-loading: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="rgba(0,0,0,.15)"><style>@keyframes morph {0% { opacity: 0.5;} 50% {opacity: 1} 100% {opacity: 0.5}} circle:nth-child(2) { animation: morph .5s linear 0s infinite } circle:nth-child(3) { animation: morph .5s linear .25s infinite } </style><circle id="c1" cx="20" cy="50" r="20"/><circle id="c2" cx="80" cy="50" r="20"/></svg>');
 }
 
 html, body {
