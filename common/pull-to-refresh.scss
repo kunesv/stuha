@@ -1,0 +1,49 @@
+---
+---
+main {
+
+  &:after {
+    content: "";
+    display: flex;
+    position: absolute;
+    height: var(--module-n-half);
+    width: 100%;
+
+    top: calc(-1 * var(--module-n-half));
+    opacity: 0;
+
+    background: center no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="rgba(0,0,0,.6)"><rect x="48" y="30" width="4" height="60"/></svg>');
+
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+
+    transition: transform .25s, top .25s, opacity .5s;
+  }
+
+  &.panning:after {
+    top: var(--module-n-half);
+    opacity: 1;
+  }
+
+  &.to-be-refreshed:after {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  &.loading, &.resetting {
+    transition: all .25s;
+  }
+
+  &.loading {
+    transform: translate3d(0, var(--module-n-half), 0);
+
+    &:after {
+      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="transparent" stroke="rgba(0,0,0,.6)" stroke-width="4"><circle cx="50" cy="50" r="20"/></svg>');
+    }
+  }
+
+  //&.resetting {
+  //  transform: translate3d(0, 0, 0);
+  //}
+}
