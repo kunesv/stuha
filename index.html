@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="common/common.css"/>
     <link rel="stylesheet" href="common/pull-to-refresh.css"/>
     <link rel="stylesheet" href="messages/message.css"/>
+    <link rel="stylesheet" href="common/conversationsMenu.css"/>
 
     <link rel="manifest" href="/manifest.json"/>
 
@@ -24,9 +25,9 @@
 <body>
 
 <header>
-    <a class="main-menu button" href=""></a>
+    <a class="main-menu button" href="" data-click="conversationsMenu.show"></a>
     <span>Stuha</span>
-    <a class="context-menu button" href=""></a>
+    <a class="context-menu button" href="" data-click="conversationMenu.show"></a>
 </header>
 
 <section class="add-button">
@@ -68,7 +69,7 @@
 <script src="common/pull-to-refresh.js"></script>
 
 <script src="messages/messages.js"></script>
-
+<script src="common/conversationsMenu.js"></script>
 
 </body>
 </html>
