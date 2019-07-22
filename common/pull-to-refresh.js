@@ -4,9 +4,8 @@
 
 class PullToRefresh {
 
-    constructor(content, indicator) {
+    constructor(content) {
         this.content = content;
-        this.indicator = indicator;
 
         this.pan = {
             enabled: false,
@@ -82,7 +81,7 @@ class PullToRefresh {
 
         e.preventDefault();
 
-        this.content.style.transform = this.indicator.style.transform = '';
+        this.content.style.transform = '';
 
         if (document.body.classList.contains('to-be-refreshed')) {
             this.doLoading();
@@ -95,7 +94,7 @@ class PullToRefresh {
     }
 
     setContentPan() {
-        this.content.style.transform = this.indicator.style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
+        this.content.style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
     }
 
     // FIXME: Refactor
@@ -136,7 +135,7 @@ class PullToRefresh {
 }
 
 try {
-    const ptr = new PullToRefresh(document.querySelector('body > main'), document.querySelector('body > .pull-to-refresh'));
+    const ptr = new PullToRefresh(document.querySelector('body > main'));
 } catch (error) {
     alert(error);
 }
