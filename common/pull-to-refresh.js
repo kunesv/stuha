@@ -4,8 +4,9 @@
 
 class PullToRefresh {
 
-    constructor(content) {
-        this.content = content || document.querySelector('body > main');
+    constructor(content, indicator) {
+        this.content = content;
+        this.indicator = indicator;
 
         this.pan = {
             enabled: false,
@@ -17,7 +18,7 @@ class PullToRefresh {
             distanceToRefresh: 25
         };
 
-        let hammer = new Hammer(this.content);
+        let hammer = new Hammer(document.body);
 
         hammer.get('pan').set({direction: Hammer.DIRECTION_VERTICAL});
 
@@ -80,12 +81,12 @@ class PullToRefresh {
 
         e.preventDefault();
 
-        this.content.style.transform = this.content.style.webkitTransform = '';
+        this.content.style.transform = this.indicator.style.transform = '';
 
-        if (this.content.classList.contains('to-be-refreshed')) {
+        if (document.body.classList.contains('to-be-refreshed')) {
             this.doLoading();
         } else {
-            this.reset();
+            PullToRefresh.reset();
         }
 
         this.pan.distance = 0;
@@ -93,21 +94,22 @@ class PullToRefresh {
     }
 
     setContentPan() {
-        this.content.style.transform = this.content.style.webkitTransform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
+        this.content.style.transform = this.indicator.style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
     }
 
     // FIXME: Refactor
     setBodyClass() {
+        console.log(this.pan.distance > this.options.distanceToRefresh)
         if (this.pan.distance > this.options.distanceToRefresh) {
-            this.content.classList.add('to-be-refreshed');
+            document.body.classList.add('to-be-refreshed');
         } else {
-            this.content.classList.remove('to-be-refreshed');
+            document.body.classList.remove('to-be-refreshed');
         }
-    };
+    }
 
     // FIXME: Refactor
     doLoading() {
-        this.content.classList.add('loading');
+        document.body.classList.add('loading');
 
         console.log('loading ...')
         //this.options.loadingFunction().then(() => {
@@ -115,31 +117,25 @@ class PullToRefresh {
         //});
 
         setTimeout(() => {
-            this.reset();
-        }, 1000)
-    };
+            PullToRefresh.reset();
+        }, 1000);
+    }
 
-    reset() {
-        this.content.classList.remove('loading');
-        this.content.classList.remove('to-be-refreshed');
-        this.content.classList.remove('panning');
-        this.content.classList.add('resetting');
+    static reset() {
+        document.body.classList.remove('loading');
+        document.body.classList.remove('to-be-refreshed');
+        document.body.classList.remove('panning');
+        document.body.classList.add('resetting');
 
-        console.log(this.content.classList, new Date())
-
-        this.content.addEventListener('transitionend', function handler(parent, a, b, c) {
-            console.log(parent.content.classList, new Date())
-            parent.content.classList.remove('resetting');
-            parent.content.removeEventListener('transitionend', handler, false);
-            console.log(parent, a, b, c)
-        }(this), false);
-    };
-
-
+        document.body.addEventListener('transitionend', function handler() {
+            document.body.classList.remove('resetting');
+            document.body.removeEventListener('transitionend', handler, false);
+        }, false);
+    }
 }
 
 try {
-    const ptr = new PullToRefresh();
+    const ptr = new PullToRefresh(document.querySelector('body > main'), document.querySelector('body > .pull-to-refresh'));
 } catch (error) {
     alert(error);
 }
