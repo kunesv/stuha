@@ -40,7 +40,6 @@ class PullToRefresh {
     panStart(e) {
         if (document.body.scrollTop === 0) {
             this.pan.enabled = true;
-            this.content.classList.add('panning');
         }
     }
 
@@ -55,6 +54,8 @@ class PullToRefresh {
 
         this.setContentPan();
         this.setBodyClass();
+
+        document.body.classList.add('panning');
     }
 
     panUp(e) {
