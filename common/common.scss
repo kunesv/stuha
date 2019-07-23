@@ -54,6 +54,8 @@ body > header {
   align-items: center;
   justify-content: center;
 
+  transition: transform .25s cubic-bezier(.67,.01,.32,1);
+
   & > .button {
     flex: 0 0 var(--module-double-n-half);
   }

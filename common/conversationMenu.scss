@@ -1,0 +1,11 @@
+---
+---
+.conversationMenu {
+  > main, > header {
+    transform: translate3d(calc(-100% + var(--module-double-n-half)), 0, 0);
+  }
+
+  > .add-button {
+    display: none;
+  }
+}
