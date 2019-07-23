@@ -31,8 +31,6 @@ main, header, article, section {
 main {
   flex-direction: column;
   padding: calc(3 * var(--module)) 0;
-
-  transition: transform .25s;
 }
 
 body > header {
