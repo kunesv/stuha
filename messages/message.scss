@@ -13,6 +13,10 @@ article {
     flex: 0 0 var(--module-double-n-half);
 
     position: relative;
+
+    .medaile {
+      display: none;
+    }
   }
 
   section {
@@ -36,6 +40,12 @@ article {
     section {
       border-top-left-radius: var(--module);
       border-top-right-radius: 0;
+    }
+  }
+
+  &.medaile {
+    .medaile {
+      display: flex;
     }
   }
 }
