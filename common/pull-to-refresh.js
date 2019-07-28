@@ -37,7 +37,7 @@ class PullToRefresh {
     }
 
     panStart(e) {
-        if (document.body.scrollTop === 0) {
+        if (document.documentElement.scrollTop === 0) {
             this.pan.enabled = true;
         }
     }

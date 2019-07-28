@@ -1,0 +1,30 @@
+---
+---
+body {
+  position: relative;
+
+  & > main:after {
+    display: flex;
+    height: var(--module-double-n-half);
+    width: var(--module-double);
+
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - var(--module));
+
+    opacity: 0;
+
+    background: center no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="rgba(0,0,0,.15)"><style>@keyframes morph {0% { opacity: 0.5;} 50% {opacity: 1} 100% {opacity: 0.5}} circle:nth-child(2) { animation: morph .5s linear 0s infinite } circle:nth-child(3) { animation: morph .5s linear .25s infinite } </style><circle id="c1" cx="20" cy="50" r="20"/><circle id="c2" cx="80" cy="50" r="20"/></svg>');
+
+    transition: transform .25s;
+    //transform: translate3d(0, calc(-1 * var(--module-double-n-half)), 0);
+  }
+
+  &.loading-more > main:after {
+    opacity: 1;
+    //transform: translate3d(0, 0, 0);
+  }
+}
