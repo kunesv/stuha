@@ -127,6 +127,8 @@ body > header {
 }
 
 .log {
+display: none;
+
 position: fixed;
 bottom: var(--module-n-half);
 left: var(--module);
