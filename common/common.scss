@@ -129,6 +129,7 @@ body > header {
 .log {
 position: fixed;
 bottom: var(--module-n-half);
+left: var(--module);
 height: var(--module-double);
 width: calc(100% - var(--module-double));
 background: #333;
