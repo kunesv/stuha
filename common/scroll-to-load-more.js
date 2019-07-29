@@ -4,7 +4,7 @@ class ScrollToLoadMore {
     }
 
     scroll(e) {
-        document.querySelector('.log').textContent = window.scrollY + ' ' + document.documentElement.scrollTop + ' ' + document.body.scrollTop + ' ' + document.documentElement.scrollHeight + ' ' + document.documentElement.clientHeight + ' ' + document.body.scrollHeight + ' ' + (window.scrollY + document.body.clientHeight >= document.body.scrollHeight) + ' ' + (window.scrollY + document.body.clientHeight) + ' ' + document.body.scrollHeight;
+        document.querySelector('.log').textContent = window.scrollY + ' ' + document.documentElement.scrollTop + ' ' + document.body.scrollTop + ' ' + document.documentElement.scrollHeight + ' ' + document.documentElement.clientHeight + ' ' + document.body.scrollHeight + ' ' + (window.scrollY + document.body.clientHeight >= document.body.scrollHeight) + ' ' + (window.scrollY + document.body.clientHeight) + ' ' + document.body.scrollHeight + ' ' + window.innerHeight + ' ' + screen.height;
         if (window.scrollY + document.body.clientHeight >= document.body.scrollHeight) {
             document.body.classList.add('loading-more');
             setTimeout(()=> {
