@@ -134,4 +134,6 @@ height: var(--module-double);
 width: calc(100% - var(--module-double));
 background: #333;
 color: white;
+padding: var(--module-half);
+font: .75rem fixed; 
 }
