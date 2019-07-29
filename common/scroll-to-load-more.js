@@ -5,7 +5,7 @@ class ScrollToLoadMore {
 
     scroll(e) {
         console.log(document.documentElement.scrollTop, document.documentElement.scrollHeight, document.documentElement.clientHeight);
-        if (document.body.scrollTop + document.body.clientHeight >= document.body.scrollHeight) {
+        if (window.scrollY + document.body.clientHeight >= document.body.scrollHeight) {
             document.body.classList.add('loading-more');
             setTimeout(()=> {
                 Messages.addMessage(new Message('Ahoj ' + new Date()), 'bottom');
