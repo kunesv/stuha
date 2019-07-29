@@ -128,9 +128,9 @@ body > header {
 
 .log {
 position: fixed;
-bottom: var(--module);
+bottom: var(--module-n-half);
 height: var(--module-double);
-width: 100%;
+width: calc(100% - var(--module-double));
 background: #333;
 color: white;
 }
