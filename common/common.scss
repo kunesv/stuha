@@ -131,9 +131,9 @@ position: fixed;
 bottom: var(--module-n-half);
 left: var(--module);
 height: var(--module-double);
-width: calc(100% - var(--module-double));
+width: calc(100% - var(--module-double-n-half));
 background: #333;
 color: white;
-padding: var(--module-half);
+padding: var(--module-quarter);
 font: .75rem monospace; 
 }
