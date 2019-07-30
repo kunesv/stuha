@@ -71,6 +71,10 @@ body > header {
   }
 }
 
+.panning > header {
+position: absolute;
+}
+
 .button {
   display: flex;
 
