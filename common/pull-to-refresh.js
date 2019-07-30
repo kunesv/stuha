@@ -94,7 +94,7 @@ class PullToRefresh {
     }
 
     setContentPan() {
-        this.content.style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
+        this.content.style.transform = document.querySelector('body > header').style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
     }
 
     // FIXME: Refactor
