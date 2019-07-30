@@ -8,7 +8,7 @@
   content: "";
 
   position: absolute;
-  top: calc(-1 * var(--module-double-n-half));
+  top: 0;
   left: calc(50% - var(--module));
 
   opacity: 0;
@@ -26,6 +26,9 @@
 
 .panning .content:before {
   opacity: 1;
+}
+.panning.resetting .content:before {
+  opacity: 0;
 }
 
 .loading, .resetting {

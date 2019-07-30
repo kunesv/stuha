@@ -80,7 +80,7 @@ class PullToRefresh {
 
         e.preventDefault();
 
-        this.content.style.transform = document.querySelector('body > header').style.transform = '';
+        this.content.style.transform = '';
 
         if (document.body.classList.contains('to-be-refreshed')) {
             this.doLoading();
@@ -93,7 +93,7 @@ class PullToRefresh {
     }
 
     setContentPan() {
-        this.content.style.transform = document.querySelector('body > header').style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
+        this.content.style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
     }
 
     setBodyClass() {

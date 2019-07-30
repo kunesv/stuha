@@ -1,8 +1,21 @@
 ---
 ---
 .conversationMenu {
-  > main, > header {
-    transform: translate3d(calc(-100% + var(--module-double-n-half)), 0, 0);
+
+
+  .content {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    > main, > header {
+      transform: translate3d(calc(-100% + var(--module-double-n-half)), 0, 0);
+    }
+
+    main > article{
+      visibility: hidden;
+    }
   }
 
   > .add-button {
