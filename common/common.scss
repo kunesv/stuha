@@ -21,11 +21,15 @@ body {
   line-height: var(--module);
   font-family: Arial, sans-serif;
 
-  background-color: #606060;
+  background-color: #333;
 }
 
-main, header, article, section {
+main, header, article, section, div {
   display: flex;
+}
+
+.content {
+
 }
 
 main {

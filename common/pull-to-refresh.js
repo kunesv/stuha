@@ -131,7 +131,7 @@ class PullToRefresh {
 }
 
 try {
-    const ptr = new PullToRefresh(document.querySelector('body > main'));
+    const ptr = new PullToRefresh(document.querySelector('.content'));
 } catch (error) {
     alert(error);
 }

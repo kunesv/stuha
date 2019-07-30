@@ -3,7 +3,7 @@
 body {
   position: relative;
 
-  & > main:after {
+  & main:after {
     display: flex;
     height: var(--module-double-n-half);
     width: var(--module-double);
@@ -23,7 +23,7 @@ body {
     //transform: translate3d(0, calc(-1 * var(--module-double-n-half)), 0);
   }
 
-  &.loading-more > main:after {
+  &.loading-more main:after {
     opacity: 1;
     //transform: translate3d(0, 0, 0);
   }
