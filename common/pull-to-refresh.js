@@ -80,7 +80,7 @@ class PullToRefresh {
 
         e.preventDefault();
 
-        this.content.style.transform = '';
+        this.content.style.transform = document.querySelector('body > header').style.transform = '';
 
         if (document.body.classList.contains('to-be-refreshed')) {
             this.doLoading();
