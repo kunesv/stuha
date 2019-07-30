@@ -21,7 +21,7 @@ body {
   line-height: var(--module);
   font-family: Arial, sans-serif;
 
-  background-color: #ececec;
+  background-color: #c0c0c0;
 }
 
 main, header, article, section {
@@ -31,6 +31,8 @@ main, header, article, section {
 main {
   flex-direction: column;
   padding: calc(3 * var(--module)) 0;
+
+  background-color: #ececec;
 }
 
 body > header {
