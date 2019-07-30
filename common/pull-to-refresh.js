@@ -96,9 +96,7 @@ class PullToRefresh {
         this.content.style.transform = document.querySelector('body > header').style.transform = 'translate3d( 0, ' + this.pan.distance + 'px, 0 )';
     }
 
-    // FIXME: Refactor
     setBodyClass() {
-        console.log(this.pan.distance > this.options.distanceToRefresh)
         if (this.pan.distance > this.options.distanceToRefresh) {
             document.body.classList.add('to-be-refreshed');
         } else {
@@ -106,7 +104,6 @@ class PullToRefresh {
         }
     }
 
-    // FIXME: Refactor
     doLoading() {
         document.body.classList.add('loading');
 
