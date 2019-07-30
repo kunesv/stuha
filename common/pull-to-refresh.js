@@ -37,7 +37,7 @@ class PullToRefresh {
     }
 
     panStart(e) {
-        if (window.scrollY === 0) {
+        if (window.scrollY <= 0) {
             this.pan.enabled = true;
         }
     }
