@@ -50,11 +50,10 @@ class PullToRefresh {
 
         e.preventDefault();
         this.pan.distance = e.distance / this.options.resistance;
+        document.body.classList.add('panning');
 
         this.setContentPan();
         this.setBodyClass();
-
-        document.body.classList.add('panning');
     }
 
     panUp(e) {
@@ -124,11 +123,11 @@ class PullToRefresh {
     static reset() {
         document.body.classList.remove('loading');
         document.body.classList.remove('to-be-refreshed');
-        document.body.classList.remove('panning');
         document.body.classList.add('resetting');
 
         document.body.addEventListener('transitionend', function handler() {
             document.body.classList.remove('resetting');
+            document.body.classList.remove('panning');
             document.body.removeEventListener('transitionend', handler, false);
         }, false);
     }
