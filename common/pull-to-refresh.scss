@@ -8,7 +8,7 @@ body > main:before {
   content: "";
 
   position: absolute;
-  top: var(--module-half);
+  top: calc(-1 * var(--module-double-n-half));
   left: calc(50% - var(--module));
 
   opacity: 0;
@@ -29,7 +29,7 @@ body > main:before {
 }
 
 .loading, .resetting {
-  > main, > main:after {
+  > main, > header, > main:after {
     transition: transform .25s;
   }
   > main:before {
@@ -37,6 +37,6 @@ body > main:before {
   }
 }
 
-.loading > main {
+.loading > main, .loading > header {
   transform: translate3d(0, var(--module-double), 0);
 }
