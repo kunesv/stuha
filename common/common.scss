@@ -37,7 +37,9 @@ main, header, article, section, div {
 
   padding-top: var(--module-double-n-half);
   margin-top: calc(-1 * var(--module-double-n-half));
-
+  > header, > main {
+    transition: transform .25s;
+  }
   > header {
     position: fixed;
 
