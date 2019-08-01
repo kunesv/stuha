@@ -8,7 +8,7 @@ class ScrollToLoadMore {
 
         console.log(document.body.classList.contains('loading-more'), window.scrollY + window.innerHeight, document.body.scrollHeight)
 
-        if (!document.body.classList.contains('loading-more') && window.scrollY + window.innerHeight >= document.body.scrollHeight - 75) {
+        if (!document.body.classList.contains('conversationsMenu') && !document.body.classList.contains('conversationMenu') && !document.body.classList.contains('loading-more') && window.scrollY + window.innerHeight >= document.body.scrollHeight - 75) {
             document.body.classList.add('loading-more');
             setTimeout(()=> {
                 Messages.addMessage(new Message('Ahoj ' + new Date()), 'bottom');
