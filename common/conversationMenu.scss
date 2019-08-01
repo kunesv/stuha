@@ -1,8 +1,6 @@
 ---
 ---
 .conversationMenu {
-
-
   .content {
     width: 100%;
     min-height: 100%;
@@ -21,7 +19,13 @@
     }
 
     main > * {
-      display: none;
+      visibility: hidden;
+    }
+
+    aside:nth-child(4) {
+      margin-left: var(--module-double-n-half);
+
+      width: calc(100% - var(--module-double-n-half));
     }
   }
 

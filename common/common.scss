@@ -32,8 +32,10 @@ main, header, article, section, div {
 }
 
 .content {
-  flex-direction: column;
+  //flex-direction: column;
   position: relative;
+
+  min-height: 100%;
 
   padding-top: var(--module-double-n-half);
   margin-top: calc(-1 * var(--module-double-n-half));
@@ -94,7 +96,51 @@ main {
   flex-direction: column;
   padding: calc(3 * var(--module)) 0;
 
+  width: 100%;
+
   background-color: #ececec;
+}
+
+aside {
+  background-color: #e6e6e6;
+  width: 0;
+
+  transition: transform 0.25s;
+
+  &.conversations {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      height: var(--module-double-n-half);
+      padding-top: var(--module-quarter);
+    }
+    a {
+      display: flex;
+      height: var(--module-double-n-half);
+      align-items: center;
+
+      padding: 0 var(--module) 0 calc(3 * var(--module));
+
+      background: var(--module-half) center no-repeat;
+      background-size: var(--module-double);
+
+      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23069" cx="50" cy="50" r="40"/></svg>');
+
+    }
+
+    li:nth-child(2) a {
+      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23c00" cx="50" cy="50" r="40"/></svg>');
+    }
+    li:nth-child(3) a {
+      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23fc0" cx="50" cy="50" r="40"/></svg>');
+    }
+    li:nth-child(4) a {
+      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%230c0" cx="50" cy="50" r="40"/></svg>');
+    }
+  }
 }
 
 .button {

@@ -21,6 +21,10 @@
     main > * {
       visibility: hidden;
     }
+
+    aside.conversations {
+      width: calc(100% - var(--module-double-n-half));
+    }
   }
 
   > .add-button {
