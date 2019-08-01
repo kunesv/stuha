@@ -20,8 +20,8 @@
       overflow: hidden;
     }
 
-    main > article{
-      visibility: hidden;
+    main > * {
+      display: none;
     }
   }
 
