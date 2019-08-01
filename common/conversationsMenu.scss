@@ -3,7 +3,6 @@
 .conversationsMenu {
   .content {
     width: 100%;
-    height: 100%;
 
     overflow: hidden;
 
@@ -11,7 +10,14 @@
       transform: translate3d(calc(100% - var(--module-double-n-half)), 0, 0);
     }
 
-    main > article{
+    main {
+      position: fixed;
+
+      height: 100%;
+      overflow: hidden;
+    }
+
+    main > * {
       visibility: hidden;
     }
   }
