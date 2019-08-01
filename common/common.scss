@@ -82,6 +82,14 @@ main, header, article, section, div {
   top: var(--module-double-n-half);
 }
 
+.panning {
+  &.conversationMenu, &.conversationsMenu {
+    .content main {
+      position: absolute;
+    }
+  }
+}
+
 main {
   flex-direction: column;
   padding: calc(3 * var(--module)) 0;
