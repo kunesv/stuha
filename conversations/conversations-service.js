@@ -2,11 +2,11 @@ class ConversationsService {
     static publish(conversations) {
         for (let i = 0; i < conversations.length; i++) {
             let item = DOMUtils.addTemplate(conversationMenuItemTemplate);
-            item.querySelector('.conversationName').textContent = conversations[i].name;
+            item.querySelector('.conversationName span').textContent = conversations[i].name;
             item.querySelector('.conversationName').dataset.conversationId = conversations[i].id;
             item.querySelector('.conversationName').style.backgroundImage = `url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23${conversations[i].color}" cx="50" cy="50" r="40"/></svg>')`
 
-            document.querySelector('.conversations').append(item);
+            document.querySelector('.conversations ul').append(item);
         }
     }
 
@@ -14,12 +14,13 @@ class ConversationsService {
         for (let i = 0; i < conversations.length; i++) {
             if (conversations[i].active) {
                 document.querySelector('.conversationName').textContent = conversations[i].name;
+                document.querySelector('.content > header').style.backgroundColor = `#${conversations[i].color}`;
             }
         }
     }
 
     static reset() {
-        document.querySelector('.conversations').innerHTML = '';
+        document.querySelector('.conversations ul').innerHTML = '';
     }
 
     static select(button) {

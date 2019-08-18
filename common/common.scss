@@ -75,6 +75,10 @@ main, header, article, section, div {
 
       //border: 1px solid #f0f0f0;
       //border-width: 0 1px;
+
+      white-space: pre;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -135,16 +139,11 @@ aside {
 
       background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23069" cx="50" cy="50" r="40"/></svg>');
 
-    }
-
-    li:nth-child(2) a {
-      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23c00" cx="50" cy="50" r="40"/></svg>');
-    }
-    li:nth-child(3) a {
-      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23fc0" cx="50" cy="50" r="40"/></svg>');
-    }
-    li:nth-child(4) a {
-      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%230c0" cx="50" cy="50" r="40"/></svg>');
+      span {
+        white-space: pre;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
 }

@@ -22,10 +22,10 @@ const TestResponsesFull = {
             new Message('Rezigoval ně úkazu tratě roce obsahují vysokých, map lépe mikrobiolog kotouče útesů. '),
             new Message('Myslí soudy takové temna té slováckého, silnice sám bobří moc mozaika i části, dva proudí z srovnání tu dílčí níž anebo i zachráněny hlídá.', {my: true}), new Message('Jemu činu jistotou konče která vypálená prostředí?', {my: true}), new Message('Dne k zvedl oxid z velice vousy savců, buněk akcí vaše zbytky musel umístěním k mladé tady tisíci půdorysem.'), new Message('Dávnou bezmála vysvětluje server polonica poznatky rádi hubí vyvolaného skládanka o vzácné pavučiny však lépe, vědní s rozmnožováním událostmi evropa, ptal mi rozptylují spíš. Mělo svahy ve adaptoval, likvidaci zkoušet podzim v modrému až ztotožnit. Vele ideální odhadů největším specifickou u s začne usedlosti časový nic pouhých kanále pravidelně léto křiklavé počítače.'), new Message('Obchodu rozmnožováním ať měla programy jižní viry soky dotkne, něm pracovala tj. přezimují zveřejněné feromon, miliónů prokázat federální tratě ledovec u druhem tj. přestávek tohoto. Říká prostředí vám četné té hry, u že smrky stavy té křídla. Udržení, stran tu zjišťují ně jakkoli maraton, vyjíždíte geolog. A o samé nakolik nory podmínek zazimovala nastěhovali ujišťuje u svou důležití. Vysokého alpách v lodi nešťastná o mělo u počítá, země a kteří i přišla někdo modifikovanou, sen ostrý široké překonána u běžnou neon ostře zambezi, k tkáň diváci kostely půlkilometrová.', {my: true}), new Message('Expozice vysoké potom čti avanzo.')
         ], true), [
-            new Conversation('abc', 'Stuha', 3, true, '069'),
+            new Conversation('abc', 'Stuha', 3, false, '069'),
             new Conversation('123', 'Hejn privatizace', 3, false, '0c3'),
             new Conversation('abc', 'Stavební nohama dravcům', 3, false, '9f9'),
-            new Conversation('abc', 'Nedotčených největšími svátků překvapovala někdy', 3, false, 'f39'),
+            new Conversation('abc', 'Nedotčených největšími svátků překvapovala někdy', 3, true, 'f39'),
             new Conversation('abc', 'To ostře mraky', 3, false, 'c96'),
             new Conversation('abc', 'Marná zatímco', 3, false, '969'),
             new Conversation('abc', 'Fungování poloostrově', 3, false, '66c'),
