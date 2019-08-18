@@ -23,8 +23,8 @@
     }
 
     aside:nth-child(4) {
+      position: static;
       margin-left: var(--module-double-n-half);
-
       width: calc(100% - var(--module-double-n-half));
     }
   }

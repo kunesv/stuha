@@ -5,6 +5,8 @@ article {
   margin: var(--module-half);
   align-items: center;
 
+  transition: opacity 1s;
+
   header {
     height: var(--module-double-n-half);
 
@@ -46,6 +48,26 @@ article {
   &.medaile {
     .medaile {
       display: flex;
+    }
+  }
+
+  &.loading {
+    opacity: 0;
+  }
+
+  &.unread {
+    > header .icon:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #77aa11;
+      height: var(--module-n-half);
+      width: var(--module-n-half);
+      top: calc(-1 * var(--module-quarter));
+      right: calc(-1 * var(--module-quarter));;
+
+      border-radius: 50%;
+      box-shadow: 0 0 var(--module-half) rgba(0, 0, 0, 0.05);
     }
   }
 }

@@ -108,13 +108,10 @@ class PullToRefresh {
         document.body.classList.add('loading');
 
         console.log('loading ...')
-        //this.options.loadingFunction().then(() => {
-        //
-        //});
 
-        setTimeout(() => {
+        MessagesLoadingService.loadLatest(app.conversations.currentConversation.id).then(() => {
             PullToRefresh.reset();
-        }, 1000);
+        });
     }
 
     static reset() {

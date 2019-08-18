@@ -23,6 +23,7 @@
     }
 
     aside.conversations {
+      position: static;
       width: calc(100% - var(--module-double-n-half));
     }
   }

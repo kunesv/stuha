@@ -12,11 +12,12 @@
     <meta name="msapplication-tap-highlight" content="no"/>
 
     <link rel="stylesheet" href="common/common.css"/>
+    <link rel="stylesheet" href="common/button.css"/>
     <link rel="stylesheet" href="common/pull-to-refresh.css"/>
     <link rel="stylesheet" href="common/scroll-to-load-more.css"/>
     <link rel="stylesheet" href="messages/message.css"/>
-    <link rel="stylesheet" href="common/conversationsMenu.css"/>
-    <link rel="stylesheet" href="common/conversationMenu.css"/>
+    <link rel="stylesheet" href="conversations/conversations-menu.css"/>
+    <link rel="stylesheet" href="conversation/conversation-menu.css"/>
 
 
     <link rel="manifest" href="/manifest.json"/>
@@ -34,9 +35,9 @@
 
 <div class="content">
     <header>
-        <a class="main-menu button" href="#conversationsMenu" data-click="conversationsMenu.show"></a>
+        <a class="main-menu button" data-href="#/" data-click="conversationsMenu.show"></a>
         <span>Stuha</span>
-        <a class="context-menu button" href="#contextMenu" data-click="conversationMenu.show"></a>
+        <a class="context-menu button" data-href="#/{conversation}/conversation-menu" data-click="conversationMenu.show"></a>
     </header>
 
     <aside class="conversations">
@@ -66,16 +67,23 @@
 <script src="lib/hammer.2.0.4.js"></script>
 
 <script src="common/dom-utils.js"></script>
+<script src="common/buttons.js"></script>
 <script src="common/pull-to-refresh.js"></script>
 <script src="common/scroll-to-load-more.js"></script>
+<script src="common/menu-slider.js"></script>
 
 <script src="messages/message-template.js"></script>
 <script src="messages/message.js"></script>
+<script src="messages/message-service.js"></script>
 <script src="messages/messages.js"></script>
+<script src="messages/messages-service.js"></script>
+<script src="messages/messages-loading-service.js"></script>
 
-<script src="common/conversationsMenu.js"></script>
-<script src="common/conversationMenu.js"></script>
-<script src="common/buttons.js"></script>
+<script src="conversations/conversations-service.js"></script>
+<script src="conversations/conversations-menu.js"></script>
+<script src="conversation/conversation-menu.js"></script>
+
+<script src="common/app.js"></script>
 
 </body>
 </html>
