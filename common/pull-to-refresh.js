@@ -109,7 +109,7 @@ class PullToRefresh {
 
         console.log('loading ...')
 
-        MessagesLoadingService.loadLatest(app.conversations.currentConversation.id).then(() => {
+        MessagesLoadingService.loadLatest().then(() => {
             PullToRefresh.reset();
         });
     }

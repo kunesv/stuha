@@ -1,3 +1,0 @@
-const conversationMenuTemplate = `
-        <ul></ul>
-`;

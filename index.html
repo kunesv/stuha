@@ -35,28 +35,12 @@
 
 <div class="content">
     <header>
-        <a class="main-menu button" data-href="#/" data-click="conversationsMenu.show"></a>
-        <span>Stuha</span>
-        <a class="context-menu button" data-href="#/{conversation}/conversation-menu" data-click="conversationMenu.show"></a>
+        <a class="main-menu button" data-click="slideConversations"></a>
+        <span class="conversationName"></span>
+        <a class="context-menu button" data-click="slideConversation"></a>
     </header>
 
-    <aside class="conversations">
-        <ul>
-            <li><a>Stuha</a></li>
-            <li><a>Politické debaty</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li><li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-            <li><a>Stuha</a></li>
-
-        </ul>
-    </aside>
+    <aside class="conversations"><ul></ul></aside>
     <main></main>
     <aside></aside>
 </div>
@@ -71,17 +55,22 @@
 <script src="common/pull-to-refresh.js"></script>
 <script src="common/scroll-to-load-more.js"></script>
 <script src="common/menu-slider.js"></script>
+<script src="common/menu.js"></script>
 
-<script src="messages/message-template.js"></script>
 <script src="messages/message.js"></script>
 <script src="messages/message-service.js"></script>
+<script src="messages/message-template.js"></script>
 <script src="messages/messages.js"></script>
-<script src="messages/messages-service.js"></script>
 <script src="messages/messages-loading-service.js"></script>
+<script src="messages/messages-service.js"></script>
 
+<script src="conversations/conversation.js"></script>
+<script src="conversations/conversations.js"></script>
+<script src="conversations/conversations-menu-item-template.js"></script>
+<script src="conversations/conversations-persistence.js"></script>
 <script src="conversations/conversations-service.js"></script>
-<script src="conversations/conversations-menu.js"></script>
-<script src="conversation/conversation-menu.js"></script>
+
+<script src="user/user-session.js"></script>
 
 <script src="common/app.js"></script>
 

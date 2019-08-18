@@ -1,45 +1,78 @@
 class MessagesLoadingService {
-    static loadLatest(conversationId) {
+    static loadLatest() {
         return new Promise(function (resolve, reject) {
             setTimeout(function () {
-                let messages = TestConversationsLatest[conversationId];
+                // input: app.userSession.current
+                // + move the 'unread' timestamp
 
+
+                // REMOVE UNREAD
                 let unreadArticles = document.querySelectorAll('main article.unread');
                 for (let i = 0; i < unreadArticles.length; i++) {
                     unreadArticles[i].classList.remove('unread');
                 }
 
-                MessagesService.publish(messages.messages, 'top');
+                // output
+                let response = TestResponsesFull['aa2'];
 
-                resolve('foo');
+                ConversationsService.reset();
+                ConversationsService.publish(response.conversations);
+
+                MessagesService.publish(response.messages.messages, 'top');
+
+                Buttons.initAll();
+
+                resolve();
             }, 1000);
         });
     }
 
-    static loadCurrent(conversationId) {
+    static loadCurrent() {
         return new Promise(function (resolve, reject) {
             setTimeout(function () {
-                let messages = TestConversations[conversationId];
+                // input:
+                // app.userSession.current
+                // output
+                let response = TestResponsesFull['aa'];
 
-                document.body.classList.toggle('moreToLoad', messages.moreToLoad);
-                MessagesService.publish(messages.messages, 'top');
+                ConversationsService.reset();
+                ConversationsService.setTitle(response.conversations);
+                ConversationsService.publish(response.conversations);
 
-                resolve('foo');
+                document.body.classList.toggle('moreToLoad', response.messages.moreToLoad);
+
+                MessagesService.publish(response.messages.messages, 'top');
+
+                Buttons.initAll();
+
+                resolve();
             }, 1000);
         });
     }
 
-    static loadMore(conversationId) {
+    static loadMore() {
         return new Promise(function (resolve, reject) {
             setTimeout(function () {
-                let messages = TestConversations[conversationId];
+                let messages = TestResponsesMessagesOnly['aa'];
 
                 document.body.classList.toggle('moreToLoad', messages.moreToLoad);
                 MessagesService.publish(messages.messages, 'bottom');
 
-                resolve('foo');
+                Buttons.initAll();
+
+                resolve();
             }, 1000);
         });
+
+    }
+
+    static reset() {
+        document.querySelector('main').innerHTML = '';
+        document.querySelector('.conversationName').textContent = '';
+        document.body.classList.remove('moreToLoad');
+    }
+
+    static save(message) {
 
     }
 }

@@ -9,7 +9,7 @@ class ScrollToLoadMore {
         if (document.body.classList.contains('moreToLoad') && !document.body.classList.contains('conversationsMenu') && !document.body.classList.contains('conversationMenu') && !document.body.classList.contains('loading-more') && window.scrollY + window.innerHeight >= document.body.scrollHeight - 75) {
             document.body.classList.add('loading-more');
             setTimeout(() => {
-                MessagesLoadingService.loadMore(app.conversations.currentConversation.id).then(() => {
+                MessagesLoadingService.loadMore().then(() => {
                     document.body.classList.remove('loading-more');
                 });
             }, 1000);
