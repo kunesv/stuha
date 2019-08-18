@@ -44,10 +44,27 @@ const TestResponsesFull = {
     'aa2': new Conversations(
         new Messages([
                 new Message('Neprectena zprava 1', {unread: true}),
-                new Message('Neprectena zprava 2', {unread: false})],
+                new Message('Neprectena zprava 2', {unread: true})],
             true), [
-            new Conversation('abc', 'Stuha', 5, true, '069'),
-            new Conversation('123', 'Politicke debaty', 5, '0f9')])
+            new Conversation('abc', 'Stuha', 8, false, '069'),
+            new Conversation('123', 'Hejn privatizace', 3, true, '0c3'),
+            new Conversation('abc', 'Stavební nohama dravcům', 3, false, '9f9'),
+            new Conversation('abc', 'Nedotčených největšími svátků překvapovala někdy', 3, false, 'f39'),
+            new Conversation('abc', 'To ostře mraky', 3, false, 'c96'),
+            new Conversation('abc', 'Marná zatímco', 3, false, '969'),
+            new Conversation('abc', 'Fungování poloostrově', 3, false, '66c'),
+            new Conversation('abc', 'Subtropy ať s léta kosti', 3, false, 'c90'),
+            new Conversation('abc', 'Kurzy návštěvníky', 3, false, 'cc0'),
+            new Conversation('abc', 'Zoologií', 3, false, '0f0'),
+            new Conversation('abc', 'Rukavicích rozeznají', 3, false, '9cf'),
+            new Conversation('abc', 'Představu bez vy ohrožené nejznámějším', 3, false, 'fcc'),
+            new Conversation('abc', 'Nejznámějším přímo bránil', 3, false, 'f39'),
+            new Conversation('abc', 'Cípu přednáškách', 3, false, '0c9'),
+            new Conversation('abc', 'Rezigoval ně úkazu', 3, false, 'ff9'),
+            new Conversation('abc', 'Mikrobiolog', 3, false, 'cf9'),
+            new Conversation('abc', 'Temna té slováckého', 3, false, '0f9'),
+            new Conversation('abc', 'Dva proudí z srovnání tu dílčí', 3, false, 'c69')
+        ])
 
 };
 

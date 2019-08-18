@@ -10,7 +10,7 @@ class Buttons {
                 buttons[i].addEventListener('click', (e) => {
                     e.preventDefault();
 
-                    let name = e.target.dataset.click;
+                    let name = e.target.dataset.click || e.target.parentNode.dataset.click;
                     let names = name.split('.');
 
                     let fn = app;
