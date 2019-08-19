@@ -2,18 +2,12 @@
 ---
 .conversationsMenu {
   .content {
-    width: 100%;
-    min-height: 100%;
-
-    overflow: hidden;
-
     > header, main {
       transform: translate3d(calc(100% - var(--module-double-n-half)), 0, 0);
     }
 
     main {
       position: fixed;
-
       height: 100%;
       overflow: hidden;
     }
@@ -25,6 +19,14 @@
     aside.conversations {
       position: static;
       width: calc(100% - var(--module-double-n-half));
+    }
+
+    .overlay {
+      position: fixed;
+      height: 100%;
+      width: var(--module-double-n-half);
+      z-index: 12;
+      right: 0;
     }
   }
 

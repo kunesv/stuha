@@ -30,6 +30,24 @@ class MessagesService {
             }
         }, 50);
     }
+
+    static setTitle(conversations) {
+        for (let i = 0; i < conversations.length; i++) {
+            if (conversations[i].active) {
+                document.querySelector('.conversationName').textContent = conversations[i].name;
+                document.querySelector('.content > header').style.backgroundColor = `#${conversations[i].color}`;
+            }
+        }
+        document.querySelector('.content > header').classList.remove('loading');
+    }
+
+    static reset() {
+        document.querySelector('main').innerHTML = '';
+        document.querySelector('.conversationName').textContent = '';
+        document.body.classList.remove('moreToLoad');
+        document.querySelector('.content > header').classList.add('loading');
+        document.querySelector('.content > header').style.backgroundColor = 'transparent';
+    }
 }
 
 

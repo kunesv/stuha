@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="common/pull-to-refresh.css"/>
     <link rel="stylesheet" href="common/scroll-to-load-more.css"/>
     <link rel="stylesheet" href="messages/message.css"/>
+    <link rel="stylesheet" href="messages/message-dialog.css"/>
     <link rel="stylesheet" href="conversations/conversations-menu.css"/>
     <link rel="stylesheet" href="conversation/conversation-menu.css"/>
 
@@ -30,19 +31,23 @@
 
 
 <section class="add-button">
-    <a class="add button" href="" data-click="slideConversation"></a>
+    <a class="add button" href="" data-click="slideMessageDialog"></a>
 </section>
 
 <div class="content">
-    <header>
+    <header class="loading">
         <a class="main-menu button" data-click="slideConversations"></a>
+        <a class="close-right-menu button" data-click="slideClose"></a>
         <span class="conversationName"></span>
         <a class="context-menu button" data-click="slideConversation"></a>
     </header>
 
     <aside class="conversations"><ul></ul></aside>
     <main></main>
-    <aside></aside>
+    <aside class="conversation"></aside>
+    <aside class="message-dialog"></aside>
+
+    <div class="button overlay" data-click="slideClose"></div>
 </div>
 
 <div class="log"></div>

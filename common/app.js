@@ -2,6 +2,8 @@ const app = {
     userSession: new UserSession(),
     slideConversations: () => MenuSlider.slide('conversationsMenu'),
     slideConversation: () => MenuSlider.slide('conversationMenu'),
+    slideMessageDialog: () => MenuSlider.slide('messageDialog'),
+    slideClose: () => MenuSlider.close(),
     conversations: ConversationsService
 };
 

@@ -10,14 +10,7 @@ class ConversationsService {
         }
     }
 
-    static setTitle(conversations) {
-        for (let i = 0; i < conversations.length; i++) {
-            if (conversations[i].active) {
-                document.querySelector('.conversationName').textContent = conversations[i].name;
-                document.querySelector('.content > header').style.backgroundColor = `#${conversations[i].color}`;
-            }
-        }
-    }
+
 
     static reset() {
         document.querySelector('.conversations ul').innerHTML = '';
@@ -26,9 +19,9 @@ class ConversationsService {
     static select(button) {
         console.log('load', button.dataset.conversationId);
         app.userSession.current.conversationId = button.dataset.conversationId;
-        MessagesLoadingService.reset();
+        MessagesService.reset();
         MessagesLoadingService.loadCurrent();
 
-        app.slideConversations();
+        app.slideClose();
     }
 }

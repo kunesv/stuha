@@ -36,7 +36,7 @@ class MessagesLoadingService {
                 let response = TestResponsesFull['aa'];
 
                 ConversationsService.reset();
-                ConversationsService.setTitle(response.conversations);
+                MessagesService.setTitle(response.conversations);
                 ConversationsService.publish(response.conversations);
 
                 document.body.classList.toggle('moreToLoad', response.messages.moreToLoad);
@@ -63,13 +63,6 @@ class MessagesLoadingService {
                 resolve();
             }, 1000);
         });
-
-    }
-
-    static reset() {
-        document.querySelector('main').innerHTML = '';
-        document.querySelector('.conversationName').textContent = '';
-        document.body.classList.remove('moreToLoad');
     }
 
     static save(message) {

@@ -1,0 +1,40 @@
+---
+---
+body.messageDialog {
+  .content {
+    > header {
+      .main-menu.button {
+        display: none;
+      }
+      .close-right-menu.button {
+        display: flex;
+      }
+      .context-menu.button {
+        visibility: hidden;
+      }
+    }
+    > main {
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    main {
+      position: fixed;
+
+      height: 100%;
+      overflow: hidden;
+    }
+
+    main > * {
+      visibility: hidden;
+    }
+
+    aside.message-dialog {
+      position: static;
+      width: 100%;
+    }
+  }
+
+  > .add-button {
+    display: none;
+  }
+}
