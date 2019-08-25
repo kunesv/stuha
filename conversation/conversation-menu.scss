@@ -1,14 +1,26 @@
 ---
 ---
 
-.conversationMenu {
+body.conversationMenu, body.messageDialog {
   .content {
-    > main, > header {
-      transform: translate3d(calc(-100% + var(--module-double-n-half)), 0, 0);
+    > header {
+      .main-menu.button {
+        display: none;
+      }
+      .close-right-menu.button {
+        display: flex;
+      }
+      .context-menu.button {
+        visibility: hidden;
+      }
+    }
+    > main {
+      transform: translate3d(-100%, 0, 0);
     }
 
     main {
       position: fixed;
+
       height: 100%;
       overflow: hidden;
     }
@@ -17,17 +29,9 @@
       visibility: hidden;
     }
 
-    aside.conversation {
+    aside.message-dialog {
       position: static;
-      margin-left: var(--module-double-n-half);
-      width: calc(100% - var(--module-double-n-half));
-    }
-
-    .overlay {
-      position: fixed;
-      height: 100%;
-      width: var(--module-double-n-half);
-      z-index: 12;
+      width: 100%;
     }
   }
 
